@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Video de fondo -->
+    <video autoplay muted loop id="background-video">
+        <source src="space.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+    </video>
+
+    <!-- Contenido principal -->
+    <div id="content">
+        <h1>Movimiento oscilatorio</h1>
+        <p>Desarrollado por Ranumi.</p>
+    </div>
+
+    <!-- Botón de inicio -->
+    <button class="button" id="startButton">Inicio</button>
+
+    <style>
+        /* Add your CSS styles here */
+    </style>
+        <script>
+        document.getElementById('startButton').addEventListener('click', function () {
+            // Seleccionar el contenido, el título y el párrafo
+            const content = document.getElementById('content');
+            const title = content.querySelector('h1');
+            const paragraph = content.querySelector('p');
+            const button = document.getElementById('startButton');
+    
+            // Aplicar la animación al título
+            title.style.animation = 'slideToTopLeft 1s forwards';
+    
+            // Ocultar el párrafo
+            paragraph.classList.add('hidden');
+    
+            // Ocultar el botón después de la animación
+            button.style.display = 'none';
+        });
+    </script>

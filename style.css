@@ -1,0 +1,114 @@
+/* Estilo global para el cuerpo y el HTML */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: serif, sans-serif; /* Aplica la fuente Arial a todo el cuerpo */
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    color: rgb(235, 243, 164); /* Color del texto */
+    overflow: hidden; /* Evita barras de desplazamiento */
+}
+
+/* Estilo para el video de fondo */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra toda la pantalla */
+    z-index: -1; /* Envía el video al fondo */
+    filter: brightness(60%) hue-rotate(50deg); /* Oscurece el video y aplica un tono azul */
+    pointer-events: none; /* Deshabilita la interacción con el video */
+}
+
+/* Estilo para el título */
+h1 {
+    font-size: 2rem; /* Tamaño del título */
+    text-align: center; /* Centra el texto */
+    margin-bottom: 5px; /* Reduce el espacio debajo del título */
+}
+
+/* Estilo para el párrafo */
+p {
+    font-size: 1.5rem; /* Tamaño del texto del párrafo */
+    text-align: center; /* Centra el texto */
+    margin-top: 0; /* Elimina el espacio superior del párrafo */
+}
+
+/* Estilo para el botón */
+.button {
+    display: inline-block;
+    padding: 15px 30px; /* Espaciado interno */
+    font-size: 1.2rem; /* Tamaño del texto */
+    color: rgb(210, 243, 207); /* Color del texto */
+    background-color: #7472b7; /* Fondo azul claro */
+    text-decoration: none; /* Sin subrayado */
+    border: none; /* Sin bordes */
+    border-radius: 50px; /* Esquinas redondeadas para un efecto más circular */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+    text-align: center; /* Centra el texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto flotante */
+    margin-top: 20px; /* Agrega espacio superior para alejarlo del párrafo */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.button:hover {
+    background-color: #dddea8; /* Azul más oscuro al pasar el cursor */
+    transform: scale(1.5); /* Efecto de agrandamiento */
+}
+
+/* Ocultar el botón */
+.hidden {
+    display: none;
+}
+
+/* Estilo para el contenido */
+#content {
+    position: relative; /* Necesario para mover el contenido */
+    text-align: center; /* Centra el texto inicialmente */
+    transition: transform 1s ease, font-size 1s ease; /* Transición suave */
+}
+
+/* Animación para deslizar hacia arriba */
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+        font-size: 3rem;
+    }
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+        font-size: 1rem;
+    }
+}
+
+/* Animación para deslizar el título hacia la esquina superior izquierda */
+@keyframes slideToTopLeft {
+    0% {
+        transform: translate(0, 0); /* Posición inicial */
+        font-size: 5rem; /* Tamaño inicial del título */
+    }
+    100% {
+        transform: translate(-40vw, -40vh); /* Mover a la esquina superior izquierda */
+        font-size: 2rem; /* Reducir el tamaño del título */
+    }
+}
+
+/* Estilo para el contenido */
+#content {
+    position: relative; /* Necesario para mover el contenido */
+    text-align: center; /* Centra el texto inicialmente */
+    animation: none; /* Por defecto, sin animación */
+}
+
+/* Ocultar el párrafo */
+.hidden {
+    display: none; /* Oculta el elemento */
+}
